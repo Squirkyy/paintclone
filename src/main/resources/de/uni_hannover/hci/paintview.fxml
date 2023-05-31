@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uni_hannover.hci.SecondaryController">
-    <Label text="Paint View"/>
+<VBox alignment="CENTER" prefHeight="385.0" prefWidth="550.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uni_hannover.hci.PaintController">
+    <Label text="Paint View" />
+    <Canvas fx:id="canvas" height="200" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" width="200" />
+    <Button onAction="#clearCanvas" text="Clear Canvas" />
 
 </VBox>
